@@ -43,8 +43,8 @@ Results will be placed in the output directory provided.
 
 Python libraries distributed by this repository must be included on your PYTHONPATH:
 ```bash
-PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/ppi ; pwd -P)"
-PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/stratipy/stratipy ; pwd -P)"
+PYTHONPATH="${PYTHONPATH}:$(cd lib/python/ppi ; pwd -P)"
+PYTHONPATH="${PYTHONPATH}:$(cd lib/python/stratipy/stratipy ; pwd -P)"
 export PYTHONPATH
 ```
 We will include a standard `setup.py` installation step as an alternative in the future.
@@ -56,6 +56,6 @@ of the `nbs` and `stratipy` projects. Each of these works are licensed separatel
 Unless otherwise noted, all files in this repository are authored by Aaron Baker and licensed
 according to the MIT license contained in the file LICENSE.txt.
 The first of two exceptions to this is the redistributed files of the `nbs` project located at
-`lib/matlab/nbs/nbs\_release\_v0.2/`, which are licensed according to LICENSE-NBS.txt.
+`lib/matlab/nbs/nbs_release_v0.2/`, which are licensed according to LICENSE-NBS.txt.
 The second exception is the redistributed files of the `stratipy` project located at
 `lib/python/stratipy/`, which are licensed according to LICENSE-STRATIPY.txt
