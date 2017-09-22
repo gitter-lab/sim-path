@@ -45,6 +45,7 @@ Python libraries distributed by this repository must be included on your PYTHONP
 ```bash
 PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/ppi ; pwd -P)"
 PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/stratipy/stratipy ; pwd -P)"
+export PYTHONPATH
 ```
 We will include a standard `setup.py` installation step as an alternative in the future.
 
