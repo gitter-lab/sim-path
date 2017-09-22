@@ -1,17 +1,17 @@
 # sim-path
 
 sim-path is a software project to improve subnetwork identification with pathway simulation. 
-To use the software, run the script `pipeline\_simulation.py` with the required arguments.
+To use the software, run the script `pipeline_simulation.py` with the required arguments.
 For example,
 
 ```bash
-./pipeline_simulation.py ~/data/irefindex/9606.mitab.04072015.txt ~/data/pathways/ ~/data/simpath_out/
+pipeline_simulation.py ~/data/irefindex/9606.mitab.04072015.txt ~/data/pathways/ ~/data/simpath_out/
 ```
 
 The required arguments include
-1. A background protein-protein interaction network
-2. A set of pathways from which to simulate genetic screen hits
-3. An output directory to place results
+1. a background protein-protein interaction network,
+2. a set of pathways from which to simulate genetic screen hits, and
+3. an output directory to place results.
 
 It is our intent to support different protein-protein interaction databases.
 [iRefIndex](http://irefindex.org/download/irefindex/data/archive/release_14.0/psi_mitab/MITAB2.6/9606.mitab.07042015.txt.zip)
@@ -40,6 +40,13 @@ Results will be placed in the output directory provided.
   * KEGGREST
   * KEGGgraph
   * igraph
+
+Python libraries distributed by this repository must be included on your PYTHONPATH:
+```bash
+PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/ppi ; pwd -P)"
+PYTHONPATH="${PYTHONPATH}:"$(cd lib/python/stratipy/stratipy ; pwd -P)"
+```
+We will include a standard `setup.py` installation step as an alternative in the future.
 
 # License
 
