@@ -182,8 +182,8 @@ def main():
         W_path = os.path.join(k_outdir, "W.csv")
         H_path = os.path.join(k_outdir, "H.csv")
         res_path = os.path.join(k_outdir, "residual.csv")
-        runtime_path = os.path.join(os.environ['CS799_REPO_DIR'], "influenza", "bin", "r2014b.tar.gz")
-        gnmf_script_path = os.path.join(os.environ['CS799_REPO_DIR'], "influenza", "bin", "gnmf_script")
+        runtime_path = os.path.join(os.environ['SIMPATH_REPO_DIR'], "bin", "r2014b.tar.gz")
+        gnmf_script_path = os.path.join(os.environ['SIMPATH_REPO_DIR'], "bin", "gnmf_script")
         attrs = {
           'exe': "mcc_script.sh",
           'args': ["-m", runtime_path, "--", gnmf_script_path, diffused_path, W_path, H_path, res_path, str(k)],

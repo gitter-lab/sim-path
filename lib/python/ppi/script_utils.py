@@ -305,9 +305,9 @@ def get_revision_number():
     we do not handle this exception because reproducibility is too often overlooked
 
   ValueError
-    if environment variable CS799_REPO_DIR is not set
+    if environment variable SIMPATH_REPO_DIR is not set
   """
-  env_var = 'CS799_REPO_DIR'
+  env_var = 'SIMPATH_REPO_DIR'
   repo_dir = os.environ.get(env_var)
   if repo_dir is None:
     raise ValueError("Missing environment variable {}".format(env_var))

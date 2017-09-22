@@ -40,6 +40,7 @@ Results will be placed in the output directory provided.
   * KEGGREST
   * KEGGgraph
   * igraph
+* MATLAB Runtime r2014b
 
 Python libraries distributed by this repository must be included on your PYTHONPATH:
 ```bash
@@ -48,6 +49,14 @@ PYTHONPATH="${PYTHONPATH}:$(cd lib/python/stratipy/stratipy ; pwd -P)"
 export PYTHONPATH
 ```
 We will include a standard `setup.py` installation step as an alternative in the future.
+
+The MATLAB r2014b runtime for Linux can be obtained at https://www.mathworks.com/products/compiler/mcr.html.
+See the notes in `bin/README` for more information.
+The runtime is identified by the pipeline through the `SIMPATH_REPO_DIR` environment variable which
+must be set to the root directory of the repository by, for example,
+```bash
+export SIMPATH_REPO_DIR="$(pwd -P)"
+```
 
 # License
 
